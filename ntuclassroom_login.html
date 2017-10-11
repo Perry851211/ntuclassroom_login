@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<!-- saved from url=(0099)file:///D:/Users2/user/pwa/%E7%99%BB%E5%85%A5%E6%88%96%E8%A8%BB%E5%86%8A%20_%20NTU%20Classroom.html -->
+<html lang="zh-tw"><!--<![endif]--><head dir="ltr"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+  
+      <title>
+       登入或註冊 | NTU Classroom
+      </title>
+  
+
+
+  
+
+  <script type="text/javascript" src="./ntuclassroom_login_files/djangojs.9629e216f942.js.下載"></script>
+
+  <link rel="icon" type="image/x-icon" href="https://courses.dlc.ntu.edu.tw/static/images/favicon.c074c912999f.ico">
+
+  
+  
+
+    <link href="./ntuclassroom_login_files/lms-style-vendor.4ccaa7f84216.css" rel="stylesheet" type="text/css">
+
+
+
+  
+  
+
+    <link href="./ntuclassroom_login_files/lms-main-v1.css" rel="stylesheet" type="text/css">
+
+
+
+
+      
+    <script type="text/javascript" src="./ntuclassroom_login_files/lms-base-vendor.cb449c35a4fc.js.下載" charset="utf-8"></script>
+
+
+      
+    <script type="text/javascript" src="./ntuclassroom_login_files/lms-base-application.87659a7364db.js.下載" charset="utf-8"></script>
+
+
+
+  <script>
+    window.baseUrl = "/static/";
+    (function (require) {
+      require.config({
+          baseUrl: window.baseUrl
+      });
+    }).call(this, require || RequireJS.require);
+  </script>
+  <script type="text/javascript" src="./ntuclassroom_login_files/require-config.cd72e66c1a3e.js.下載"></script>
+  
+    <script type="text/javascript">
+        (function (require) {
+          require.config({
+              paths: {
+                'js/courseware/courseware_factory': 'js/courseware/courseware_factory.01c762a7c9e6',
+'draggabilly': 'js/vendor/draggabilly.26caba6f7187',
+'js/courseware/toggle_element_visibility': 'js/courseware/toggle_element_visibility.22ad04bb0497',
+'js/courseware/course_home_events': 'js/courseware/course_home_events.efe56112dd91',
+'js/courseware/link_clicked_events': 'js/courseware/link_clicked_events',
+'moment': 'common/js/vendor/moment-with-locales.084396f4103c',
+'moment-timezone': 'common/js/vendor/moment-timezone-with-data.b062d5eadf09',
+'js/student_account/logistration_factory': 'js/student_account/logistration_factory.541254eb1ae0',
+'js/groups/views/cohorts_dashboard_factory': 'js/groups/views/cohorts_dashboard_factory.eb8701884901',
+'js/dateutil_factory': 'js/dateutil_factory.f141a7899e5d',
+'js/courseware/accordion_events': 'js/courseware/accordion_events.6064c7809de5',
+'js/bookmarks/views/bookmark_button': 'js/bookmarks/views/bookmark_button.bca63457af5c',
+'js/views/message_banner': 'js/views/message_banner.099aec538f98',
+'js/student_profile/views/learner_profile_factory': 'js/student_profile/views/learner_profile_factory.c70d54366733'
+            }
+          });
+        }).call(this, require || RequireJS.require);
+    </script>
+  
+
+
+  
+
+  
+
+  
+
+
+  
+
+
+<!-- dummy Segment -->
+<script type="text/javascript">
+  var analytics = {
+    track: function() { return; },
+    trackLink: function() { return; },
+    pageview: function() { return; },
+    page: function() { return; }
+  };
+</script>
+<!-- end dummy Segment -->
+
+
+  <meta name="path_prefix" content="">
+  <meta name="google-site-verification" content="_mipQ4AtZQDNmbtOkwehQDOgCxUUV2fb_C0b6wbiRHY">
+
+
+
+<script src="chrome-extension://jhffgcfmcckgmioipfnmbannkpncfipo/util.js"></script><script src="chrome-extension://jhffgcfmcckgmioipfnmbannkpncfipo/pagejs.js"></script></head>
+
+<body class="ltr  lang_zh-tw">
+
+
+<div id="page-prompt"></div>
+  <div class="window-wrap" dir="ltr">
+    <a class="nav-skip" href="https://courses.dlc.ntu.edu.tw/login#main">跳到主要內容</a>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+  <header id="global-navigation" class="header-global ">
+    <nav class="wrapper-header" aria-label="全球">
+    <h1 class="logo">
+      <a href="https://courses.dlc.ntu.edu.tw/">
+        
+        
+            <img class="" src="./ntuclassroom_login_files/logo.b6c374d66d57.png" alt="NTU Classroom首頁">
+        
+      </a>
+    </h1>
+
+
+      <ol class="left list-inline nav-global">
+        
+        
+
+        
+              <li class="item nav-global-04">
+                <a class="btn-neutral" href="https://courses.dlc.ntu.edu.tw/register?next=%2Fdashboard">註冊</a>
+              </li>
+        
+      </ol>
+
+      <ol class="right nav-courseware list-inline">
+        
+          <li class="item nav-courseware-01">
+                <a class="btn btn-login" href="https://courses.dlc.ntu.edu.tw/login?next=%2Fdashboard">登入</a>
+          </li>
+        
+      </ol>
+    </nav>
+</header>
+
+
+
+
+
+
+
+
+
+
+    <div class="content-wrapper" id="content">
+      
+
+
+
+
+
+
+
+
+
+        <script type="text/template" id="account-tpl">
+            <form id="email-change-form" method="post">
+    <label for="new-email"><%- gettext("New Address") %></label>
+    <input id="new-email" type="text" name="new-email" value="" placeholder="xsy@edx.org" data-validate="required email"/>
+    <div id="new-email-status" />
+
+    <label for="password"><%- gettext("Password") %></label>
+    <input id="password" type="password" name="password" value="" data-validate="required"/>
+    <div id="password-status" />
+
+    <div class="submit-button">
+        <input type="submit" id="email-change-submit" value="<%- gettext("Change My Email Address") %>">
+    </div>
+    <div id="request-email-status" />
+
+    <div id="password-reset">
+        <button type="button"><%- gettext("Reset Password") %></button>
+    </div>
+    <div id="password-reset-status" />
+</form>
+
+        </script>
+        <script type="text/template" id="access-tpl">
+            <section id="login-anchor" class="form-type">
+    <div id="login-form" class="form-wrapper <% if ( mode !== 'login' ) { %>hidden<% } %>"></div>
+</section>
+
+<section id="register-anchor" class="form-type">
+    <div id="register-form" class="form-wrapper <% if ( mode !== 'register' ) { %>hidden<% } %>"></div>
+</section>
+
+<section id="password-reset-anchor" class="form-type">
+    <div id="password-reset-form" class="form-wrapper hidden"></div>
+</section>
+
+<section id="institution_login-anchor" class="form-type">
+    <div id="institution_login-form" class="form-wrapper hidden"></div>
+</section>
+
+<section id="hinted-login-anchor" class="form-type">
+    <div id="hinted-login-form" class="form-wrapper <% if ( mode !== 'hinted_login' ) { %>hidden<% } %>"></div>
+</section>
+
+        </script>
+        <script type="text/template" id="form_field-tpl">
+            <div class="form-field <%=type%>-<%= name %>">
+    <% if ( type !== 'checkbox' ) { %>
+        <label for="<%= form %>-<%= name %>">
+            <%= label %>
+            <% if ( required && requiredStr ) { %> <%= requiredStr %></label><% } %>
+        </label>
+        <% if (supplementalLink && supplementalText) { %>
+            <div class="supplemental-link">
+                <a href="<%- supplementalLink %>"><%- supplementalText %></a>
+            </div>
+        <% } %>
+    <% } %>
+
+    <% if ( type === 'select' ) { %>
+        <select id="<%= form %>-<%= name %>"
+            name="<%= name %>"
+            class="input-inline"
+            <% if ( instructions ) { %>
+            aria-describedby="<%= form %>-<%= name %>-desc"
+            <% } %>
+            <% if ( typeof errorMessages !== 'undefined' ) {
+                _.each(errorMessages, function( msg, type ) {%>
+                    data-errormsg-<%= type %>="<%= msg %>"
+            <%  });
+            } %>
+            <% if ( required ) { %> aria-required="true" required<% } %>>
+        <% _.each(options, function(el) { %>
+            <option value="<%= el.value%>"<% if ( el.default ) { %> data-isdefault="true"<% } %>><%= el.name %></option>
+        <% }); %>
+        </select>
+        <% if ( instructions ) { %> <span class="tip tip-input" id="<%= form %>-<%= name %>-desc"><%= instructions %></span><% } %>
+        <% if (supplementalLink && supplementalText) { %>
+            <div class="supplemental-link">
+                <a href="<%- supplementalLink %>"><%- supplementalText %></a>
+            </div>
+        <% } %>
+    <% } else if ( type === 'textarea' ) { %>
+        <textarea id="<%= form %>-<%= name %>"
+            type="<%= type %>"
+            name="<%= name %>"
+            class="input-block"
+            <% if ( instructions ) { %>
+            aria-describedby="<%= form %>-<%= name %>-desc"
+            <% } %>
+            <% if ( restrictions.min_length ) { %> minlength="<%= restrictions.min_length %>"<% } %>
+            <% if ( restrictions.max_length ) { %> maxlength="<%= restrictions.max_length %>"<% } %>
+            <% if ( typeof errorMessages !== 'undefined' ) {
+                _.each(errorMessages, function( msg, type ) {%>
+                    data-errormsg-<%= type %>="<%= msg %>"
+            <%  });
+            } %>
+            <% if ( required ) { %> aria-required="true" required<% } %> ></textarea>
+            <% if ( instructions ) { %> <span class="tip tip-input" id="<%= form %>-<%= name %>-desc"><%= instructions %></span><% } %>
+            <% if (supplementalLink && supplementalText) { %>
+                <div class="supplemental-link">
+                    <a href="<%- supplementalLink %>"><%- supplementalText %></a>
+                </div>
+            <% } %>
+    <% } else { %>
+        <input id="<%= form %>-<%= name %>"
+           type="<%= type %>"
+           name="<%= name %>"
+           class="input-block <% if ( type === 'checkbox' ) { %>checkbox<% } %>"
+            <% if ( instructions ) { %> aria-describedby="<%= form %>-<%= name %>-desc" <% } %>
+            <% if ( restrictions.min_length ) { %> minlength="<%= restrictions.min_length %>"<% } %>
+            <% if ( restrictions.max_length ) { %> maxlength="<%= restrictions.max_length %>"<% } %>
+            <% if ( required ) { %> required<% } %>
+            <% if ( typeof errorMessages !== 'undefined' ) {
+                _.each(errorMessages, function( msg, type ) {%>
+                    data-errormsg-<%= type %>="<%= msg %>"
+            <%  });
+            } %>
+            <% if ( placeholder ) { %> placeholder="<%= placeholder %>"<% } %>
+            value="<%- defaultValue %>"
+        />
+        <% if ( type === 'checkbox' ) { %>
+            <label for="<%= form %>-<%= name %>">
+                <%= label %>
+                <% if ( required && requiredStr ) { %> <%= requiredStr %><% } %>
+            </label>
+        <% } %>
+        <% if ( instructions ) { %> <span class="tip tip-input" id="<%= form %>-<%= name %>-desc"><%= instructions %></span><% } %>
+        <% if (supplementalLink && supplementalText) { %>
+            <div class="supplemental-link">
+                <a href="<%- supplementalLink %>"><%- supplementalText %></a>
+            </div>
+        <% } %>
+    <% } %>
+
+    <% if( form === 'login' && name === 'password' ) { %>
+        <button type="button" class="forgot-password field-link"><%- gettext("Forgot password?") %></button>
+    <% } %>
+</div>
+
+        </script>
+        <script type="text/template" id="login-tpl">
+            <div class="js-form-feedback" aria-live="assertive" tabindex="-1">
+</div>
+
+<form id="login" class="login-form" tabindex="-1" method="POST">
+
+    <div class="section-title lines">
+        <h2>
+            <span class="text"><%- gettext("Sign in") %></span>
+        </h2>
+    </div>
+
+    <p class="sr">
+        <% if ( context.providers.length > 0 && !context.currentProvider || context.hasSecondaryProviders ) { %>
+            <%- gettext("Sign in here using your email address and password, or use one of the providers listed below.") %>
+        <% } else { %>
+            <%- gettext("Sign in here using your email address and password.") %>
+        <% } %>
+        <%- gettext("If you do not yet have an account, use the button below to register.") %>
+    </p>
+
+    <%= context.fields %>
+
+    <button type="submit" class="action action-primary action-update js-login login-button"><%- gettext("Sign in") %></button>
+
+    <% if ( context.providers.length > 0 && !context.currentProvider || context.hasSecondaryProviders ) { %>
+    <div class="login-providers">
+        <div class="section-title lines">
+            <h2>
+                <span class="text"><%- gettext("or sign in with") %></span>
+            </h2>
+        </div>
+
+        <% _.each( context.providers, function( provider ) {
+            if ( provider.loginUrl ) { %>
+                <button type="button" class="button button-primary button-<%- provider.id %> login-provider login-<%- provider.id %>" data-provider-url="<%- provider.loginUrl %>">
+                    <div class="icon <% if ( provider.iconClass ) { %>fa <%- provider.iconClass %><% } %>" aria-hidden="true">
+                        <% if ( provider.iconImage ) { %>
+                            <img class="icon-image" src="<%- provider.iconImage %>" alt="<%- provider.name %> icon" />
+                        <% } %>
+                    </div>
+                    <span aria-hidden="true"><%- provider.name %></span>
+                    <span class="sr"><%- _.sprintf( gettext("Sign in with %(providerName)s"), {providerName: provider.name} ) %></span>
+                </button>
+            <% }
+        }); %>
+
+        <% if ( context.hasSecondaryProviders ) { %>
+            <button type="button" class="button-secondary-login form-toggle" data-type="institution_login">
+                <%- gettext("Use my institution/campus credentials") %>
+            </button>
+        <% } %>
+    </div>
+    <% } %>
+</form>
+
+<div class="toggle-form">
+    <div class="section-title">
+        <h2>
+            <span class="text"><%- _.sprintf( gettext("第一次來到 %(platformName)s？"), context ) %></span>
+        </h2>
+    </div>
+    <button class="nav-btn form-toggle" data-type="register"><%- gettext("建立新帳號") %></button>
+</div>
+
+        </script>
+        <script type="text/template" id="register-tpl">
+            <div class="js-form-feedback" aria-live="assertive" tabindex="-1">
+</div>
+
+<form id="register" class="register-form" autocomplete="off" tabindex="-1" method="POST">
+    <% if (!context.currentProvider) { %>
+        <% if (context.providers.length > 0 || context.hasSecondaryProviders) { %>
+            <div class="login-providers">
+                <div class="section-title lines">
+                    <h2>
+                        <span class="text"><%- gettext("Create an account using") %></span>
+                    </h2>
+                </div>
+                <%
+                _.each( context.providers, function( provider) {
+                    if ( provider.registerUrl ) { %>
+                        <button type="button" class="button button-primary button-<%- provider.id %> login-provider register-<%- provider.id %>" data-provider-url="<%- provider.registerUrl %>">
+                            <div class="icon <% if ( provider.iconClass ) { %>fa <%- provider.iconClass %><% } %>" aria-hidden="true">
+                                <% if ( provider.iconImage ) { %>
+                                    <img class="icon-image" src="<%- provider.iconImage %>" alt="<%- provider.name %> icon" />
+                                <% } %>
+                            </div>
+                            <span aria-hidden="true"><%- provider.name %></span>
+                            <span class="sr"><%- _.sprintf( gettext("Create account using %(providerName)s."), {providerName: provider.name} ) %></span>
+                        </button>
+                <%  }
+                }); %>
+
+                <% if ( context.hasSecondaryProviders ) { %>
+                    <button type="button" class="button-secondary-login form-toggle" data-type="institution_login">
+                        <%- gettext("Use my institution/campus credentials") %>
+                    </button>
+                <% } %>
+            </div>
+            <div class="section-title lines">
+                <h2>
+                    <span class="text"><%- gettext("or create a new one here") %></span>
+                </h2>
+            </div>
+        <% } else { %>
+            <div class="section-title lines">
+                <h2>
+                    <span class="text"><%- gettext("建立新帳號") %></span>
+                </h2>
+            </div>
+        <% } %>
+    <% } %>
+
+    <%= context.fields %>
+
+    <button type="submit" class="action action-primary action-update js-register register-button"><%- gettext("建立您的帳號") %></button>
+    <p class="note">* <%- gettext("必填欄位") %></p>
+</form>
+
+<div class="toggle-form">
+    <div class="section-title">
+        <h2>
+            <span class="text"><%- gettext("已經有帳號了？") %></span>
+        </h2>
+    </div>
+    <button class="nav-btn form-toggle" data-type="login"><%- gettext("Sign in") %></button>
+</div>
+
+        </script>
+        <script type="text/template" id="institution_login-tpl">
+            <div class="wrapper-other-login">
+    <div class="section-title lines">
+        <h2>
+            <span class="text">
+                <%- gettext("Sign in with Institution/Campus Credentials") %>
+            </span>
+        </h2>
+    </div>
+
+    <p class="instructions"><%- gettext("Choose your institution from the list below:") %></p>
+
+    <ul class="institution-list">
+        <% _.each( _.sortBy(providers, "name"), function( provider ) {
+            if ( provider.loginUrl ) { %>
+                <li class="institution">
+                    <a class="institution-login-link" href="<%- provider.loginUrl %>"><%- provider.name %></a>
+                </li>
+            <% }
+        }); %>
+    </ul>
+
+    <div class="section-title lines">
+        <h2>
+            <span class="text"><%- gettext("or") %></span>
+        </h2>
+    </div>
+
+    <div class="toggle-form">
+        <button class="nav-btn form-toggle" data-type="login"><%- gettext("Back to sign in") %></button>
+    </div>
+</div>
+
+        </script>
+        <script type="text/template" id="institution_register-tpl">
+            <div class="wrapper-other-login">
+    <div class="section-title lines">
+        <h2>
+            <span class="text">
+                <%- gettext("Register with Institution/Campus Credentials") %>
+            </span>
+        </h2>
+    </div>
+
+    <p class="instructions"><%- gettext("Choose your institution from the list below:") %></p>
+
+    <ul class="institution-list">
+        <% _.each( _.sortBy(providers, "name"), function( provider ) {
+            if ( provider.registerUrl ) { %>
+                <li class="institution">
+                    <a class="institution-login-link" href="<%- provider.registerUrl %>"><%- provider.name %></a>
+                </li>
+            <% }
+        }); %>
+    </ul>
+
+    <div class="section-title lines">
+        <h2>
+            <span class="text"><%- gettext("or") %></span>
+        </h2>
+    </div>
+
+    <div class="toggle-form">
+        <button class="nav-btn form-toggle" data-type="register"><%- gettext("Register through edX") %></button>
+    </div>
+</div>
+
+        </script>
+        <script type="text/template" id="password_reset-tpl">
+            <div class="js-form-feedback" aria-live="assertive" tabindex="-1">
+</div>
+
+<form id="password-reset" class="password-reset-form" tabindex="-1" method="POST">
+
+    <div class="section-title lines">
+        <h2>
+            <span class="text"><%- gettext("Password assistance") %></span>
+        </h2>
+    </div>
+
+    <p class="action-label"><%- gettext("Please enter your email address below and we will send you instructions for setting a new password.") %></p>
+
+    <%= fields %>
+
+    <button type="submit" class="action action-primary action-update js-reset"><%- gettext("Reset my password") %></button>
+</form>
+
+        </script>
+        <script type="text/template" id="hinted_login-tpl">
+            <div class="wrapper-other-login">
+    <div class="section-title lines">
+        <h2>
+            <span class="text"><%- gettext("Sign in") %></span>
+        </h2>
+    </div>
+
+    <p class="instructions"><%- _.sprintf( gettext("Would you like to sign in using your %(providerName)s credentials?"), { providerName: hintedProvider.name } ) %></p>
+
+    <button class="action action-primary action-update proceed-button button-<%- hintedProvider.id %> hinted-login-<%- hintedProvider.id %>">
+        <span class="icon <% if ( hintedProvider.iconClass ) { %>fa <%- hintedProvider.iconClass %><% } %>" aria-hidden="true">
+            <% if ( hintedProvider.iconImage ) { %>
+                <img class="icon-image" src="<%- hintedProvider.iconImage %>" alt="<%- hintedProvider.name %> icon" />
+            <% } %>
+        </span>
+        <%- _.sprintf( gettext("Sign in using %(providerName)s"), { providerName: hintedProvider.name } ) %>
+    </button>
+
+    <div class="section-title lines">
+        <h2>
+            <span class="text"><%- gettext("or") %></span>
+        </h2>
+    </div>
+
+    <div class="toggle-form">
+        <button class="nav-btn form-toggle" data-type="login"><%- gettext("Show me other ways to sign in or register") %></button>
+    </div>
+</div>
+
+        </script>
+
+
+<div class="section-bkg-wrapper">
+    <main id="main" aria-label="Content" tabindex="-1">
+        <div id="login-and-registration-container" class="login-register">
+            <section id="login-anchor" class="form-type">
+    <div id="login-form" class="form-wrapper ">
+            <div class="js-form-feedback" aria-live="assertive" tabindex="-1">
+</div>
+
+<form id="login" class="login-form" tabindex="-1" method="POST">
+
+    <div class="section-title lines">
+        <h2>
+            <span class="text">登入</span>
+        </h2>
+    </div>
+
+    <p class="sr">
+        
+            使用您的電子郵件地址和密碼登入，或使用下面列出的第三方登入
+        
+        如果你還未有帳戶，請點擊下面按鈕進行註冊。
+    </p>
+
+    
+            <div class="form-field email-email">
+    
+        <label for="login-email">
+            電子郵件
+            
+        </label>
+        
+    
+
+    
+        <input id="login-email" type="email" name="email" class="input-block " aria-describedby="login-email-desc" minlength="3" maxlength="254" required="" placeholder="username@domain.com" value="">
+        
+         <span class="tip tip-input" id="login-email-desc">您在 NTU Classroom 上註冊的電子郵件</span>
+        
+    
+
+    
+</div>
+
+        
+            <div class="form-field password-password">
+    
+        <label for="login-password">
+            密碼
+            
+        </label>
+        
+    
+
+    
+        <input id="login-password" type="password" name="password" class="input-block " minlength="2" maxlength="75" required="" value="">
+        
+        
+        
+    
+
+    
+        <button type="button" class="forgot-password field-link">忘記密碼？</button>
+    
+</div>
+
+        
+            <div class="form-field checkbox-remember">
+    
+
+    
+        <input id="login-remember" type="checkbox" name="remember" class="input-block checkbox" value="false">
+        
+            <label for="login-remember">
+                記住我
+                
+            </label>
+        
+        
+        
+    
+
+    
+</div>
+
+        
+
+    <button type="submit" class="action action-primary action-update js-login login-button">登入</button>
+
+    
+    <div class="login-providers">
+        <div class="section-title lines">
+            <h2>
+                <span class="text">或登入用</span>
+            </h2>
+        </div>
+
+        
+                <button type="button" id="NTU_login" class="button button-primary button-saml-ntu-sso-2 login-provider login-saml-ntu-sso-2" data-provider-url="/auth/login/tpa-saml/?auth_entry=login&amp;next=%2Fdashboard&amp;idp=ntu-sso-2">
+                    <div class="icon fa fa-sign-in" aria-hidden="true">
+                        
+                    </div>
+                    <span aria-hidden="true">透過台大計中帳號進行登入</span>
+                    <span class="sr">使用透過台大計中帳號進行登入 登入</span>
+                </button>
+            
+
+        
+    </div>
+    
+</form>
+
+<div class="toggle-form">
+    <div class="section-title">
+        <h2>
+            <span class="text">第一次來到 NTU Classroom？</span>
+        </h2>
+    </div>
+    <button class="nav-btn form-toggle" data-type="register">建立新帳號</button>
+</div>
+
+        </div>
+</section>
+
+<section id="register-anchor" class="form-type">
+    <div id="register-form" class="form-wrapper hidden"></div>
+</section>
+
+<section id="password-reset-anchor" class="form-type">
+    <div id="password-reset-form" class="form-wrapper hidden"></div>
+</section>
+
+<section id="institution_login-anchor" class="form-type">
+    <div id="institution_login-form" class="form-wrapper hidden"></div>
+</section>
+
+<section id="hinted-login-anchor" class="form-type">
+    <div id="hinted-login-form" class="form-wrapper hidden"></div>
+</section>
+
+        </div></main>
+</div>
+
+      
+    </div>
+
+
+  </div>
+
+  
+    
+    
+      <script type="text/javascript" src="./ntuclassroom_login_files/logistration_factory.541254eb1ae0.js.下載"></script>
+    <script type="text/javascript">
+        (function (require) {
+            require(['js/student_account/logistration_factory'], function (LogistrationFactory) {
+                
+        var options = {"platform_name": "NTU Classroom", "third_party_auth_hint": "", "initial_mode": "login", "login_form_desc": {"submit_url": "/user_api/v1/account/login_session/", "fields": [{"restrictions": {"min_length": 3, "max_length": 254}, "required": true, "name": "email", "type": "email", "supplementalLink": "", "errorMessages": {}, "label": "\u96fb\u5b50\u90f5\u4ef6", "supplementalText": "", "placeholder": "username@domain.com", "defaultValue": "", "instructions": "\u60a8\u5728 NTU Classroom \u4e0a\u8a3b\u518a\u7684\u96fb\u5b50\u90f5\u4ef6"}, {"restrictions": {"min_length": 2, "max_length": 75}, "required": true, "name": "password", "type": "password", "supplementalLink": "", "errorMessages": {}, "label": "\u5bc6\u78bc", "supplementalText": "", "placeholder": "", "defaultValue": "", "instructions": ""}, {"restrictions": {}, "required": false, "name": "remember", "type": "checkbox", "supplementalLink": "", "errorMessages": {}, "label": "\u8a18\u4f4f\u6211", "supplementalText": "", "placeholder": "", "defaultValue": false, "instructions": ""}], "method": "post"}, "password_reset_form_desc": {"submit_url": "/account/password", "fields": [{"restrictions": {"min_length": 3, "max_length": 254}, "required": true, "name": "email", "type": "email", "supplementalLink": "", "errorMessages": {}, "label": "\u96fb\u5b50\u90f5\u4ef6", "supplementalText": "", "placeholder": "username@domain.com", "defaultValue": "", "instructions": "\u60a8\u5728 NTU Classroom \u4e0a\u8a3b\u518a\u7684\u96fb\u5b50\u90f5\u4ef6"}], "method": "post"}, "support_link": {}, "login_redirect_url": "/dashboard", "registration_form_desc": {"submit_url": "/user_api/v1/account/registration/", "fields": [{"restrictions": {"min_length": 3, "max_length": 254}, "required": true, "name": "email", "type": "email", "supplementalLink": "", "errorMessages": {}, "label": "\u96fb\u5b50\u90f5\u4ef6", "supplementalText": "", "placeholder": "username@domain.com", "defaultValue": "", "instructions": ""}, {"restrictions": {"max_length": 255}, "required": true, "name": "name", "type": "text", "supplementalLink": "", "errorMessages": {}, "label": "\u5168\u540d", "supplementalText": "", "placeholder": "Jane Doe", "defaultValue": "", "instructions": "\u60a8\u7684\u771f\u5be6\u540d\u7a31\uff0c\u7528\u4f86\u986f\u793a\u5728\u60a8\u7684\u8b49\u66f8"}, {"restrictions": {"min_length": 2, "max_length": 30}, "required": true, "name": "username", "type": "text", "supplementalLink": "", "errorMessages": {}, "label": "\u516c\u958b\u7684\u4f7f\u7528\u8005\u540d\u7a31", "supplementalText": "", "placeholder": "JaneDoe", "defaultValue": "", "instructions": "\u5728\u8ab2\u7a0b\u4e2d\u7528\u4f86\u8b58\u5225\u8eab\u4efd\u7684\u540d\u7a31 - \u003cstrong\u003e(\u4e4b\u5f8c\u4e0d\u80fd\u518d\u66f4\u6539)\u003c/strong\u003e"}, {"restrictions": {"min_length": 2, "max_length": 75}, "required": true, "name": "password", "type": "password", "supplementalLink": "", "errorMessages": {}, "label": "\u5bc6\u78bc", "supplementalText": "", "placeholder": "", "defaultValue": "", "instructions": ""}, {"restrictions": {}, "required": false, "name": "gender", "type": "select", "supplementalLink": "", "errorMessages": {}, "label": "\u6027\u5225", "options": [{"default": true, "name": "--", "value": ""}, {"name": "\u7537\u6027", "value": "m"}, {"name": "\u5973\u6027", "value": "f"}, {"name": "\u5176\u4ed6", "value": "o"}], "supplementalText": "", "placeholder": "", "defaultValue": "", "instructions": ""}, {"restrictions": {}, "required": false, "name": "year_of_birth", "type": "select", "supplementalLink": "", "errorMessages": {}, "label": "\u51fa\u751f\u5e74\u4efd", "options": [{"default": true, "name": "--", "value": ""}, {"name": "2017", "value": "2017"}, {"name": "2016", "value": "2016"}, {"name": "2015", "value": "2015"}, {"name": "2014", "value": "2014"}, {"name": "2013", "value": "2013"}, {"name": "2012", "value": "2012"}, {"name": "2011", "value": "2011"}, {"name": "2010", "value": "2010"}, {"name": "2009", "value": "2009"}, {"name": "2008", "value": "2008"}, {"name": "2007", "value": "2007"}, {"name": "2006", "value": "2006"}, {"name": "2005", "value": "2005"}, {"name": "2004", "value": "2004"}, {"name": "2003", "value": "2003"}, {"name": "2002", "value": "2002"}, {"name": "2001", "value": "2001"}, {"name": "2000", "value": "2000"}, {"name": "1999", "value": "1999"}, {"name": "1998", "value": "1998"}, {"name": "1997", "value": "1997"}, {"name": "1996", "value": "1996"}, {"name": "1995", "value": "1995"}, {"name": "1994", "value": "1994"}, {"name": "1993", "value": "1993"}, {"name": "1992", "value": "1992"}, {"name": "1991", "value": "1991"}, {"name": "1990", "value": "1990"}, {"name": "1989", "value": "1989"}, {"name": "1988", "value": "1988"}, {"name": "1987", "value": "1987"}, {"name": "1986", "value": "1986"}, {"name": "1985", "value": "1985"}, {"name": "1984", "value": "1984"}, {"name": "1983", "value": "1983"}, {"name": "1982", "value": "1982"}, {"name": "1981", "value": "1981"}, {"name": "1980", "value": "1980"}, {"name": "1979", "value": "1979"}, {"name": "1978", "value": "1978"}, {"name": "1977", "value": "1977"}, {"name": "1976", "value": "1976"}, {"name": "1975", "value": "1975"}, {"name": "1974", "value": "1974"}, {"name": "1973", "value": "1973"}, {"name": "1972", "value": "1972"}, {"name": "1971", "value": "1971"}, {"name": "1970", "value": "1970"}, {"name": "1969", "value": "1969"}, {"name": "1968", "value": "1968"}, {"name": "1967", "value": "1967"}, {"name": "1966", "value": "1966"}, {"name": "1965", "value": "1965"}, {"name": "1964", "value": "1964"}, {"name": "1963", "value": "1963"}, {"name": "1962", "value": "1962"}, {"name": "1961", "value": "1961"}, {"name": "1960", "value": "1960"}, {"name": "1959", "value": "1959"}, {"name": "1958", "value": "1958"}, {"name": "1957", "value": "1957"}, {"name": "1956", "value": "1956"}, {"name": "1955", "value": "1955"}, {"name": "1954", "value": "1954"}, {"name": "1953", "value": "1953"}, {"name": "1952", "value": "1952"}, {"name": "1951", "value": "1951"}, {"name": "1950", "value": "1950"}, {"name": "1949", "value": "1949"}, {"name": "1948", "value": "1948"}, {"name": "1947", "value": "1947"}, {"name": "1946", "value": "1946"}, {"name": "1945", "value": "1945"}, {"name": "1944", "value": "1944"}, {"name": "1943", "value": "1943"}, {"name": "1942", "value": "1942"}, {"name": "1941", "value": "1941"}, {"name": "1940", "value": "1940"}, {"name": "1939", "value": "1939"}, {"name": "1938", "value": "1938"}, {"name": "1937", "value": "1937"}, {"name": "1936", "value": "1936"}, {"name": "1935", "value": "1935"}, {"name": "1934", "value": "1934"}, {"name": "1933", "value": "1933"}, {"name": "1932", "value": "1932"}, {"name": "1931", "value": "1931"}, {"name": "1930", "value": "1930"}, {"name": "1929", "value": "1929"}, {"name": "1928", "value": "1928"}, {"name": "1927", "value": "1927"}, {"name": "1926", "value": "1926"}, {"name": "1925", "value": "1925"}, {"name": "1924", "value": "1924"}, {"name": "1923", "value": "1923"}, {"name": "1922", "value": "1922"}, {"name": "1921", "value": "1921"}, {"name": "1920", "value": "1920"}, {"name": "1919", "value": "1919"}, {"name": "1918", "value": "1918"}, {"name": "1917", "value": "1917"}, {"name": "1916", "value": "1916"}, {"name": "1915", "value": "1915"}, {"name": "1914", "value": "1914"}, {"name": "1913", "value": "1913"}, {"name": "1912", "value": "1912"}, {"name": "1911", "value": "1911"}, {"name": "1910", "value": "1910"}, {"name": "1909", "value": "1909"}, {"name": "1908", "value": "1908"}, {"name": "1907", "value": "1907"}, {"name": "1906", "value": "1906"}, {"name": "1905", "value": "1905"}, {"name": "1904", "value": "1904"}, {"name": "1903", "value": "1903"}, {"name": "1902", "value": "1902"}, {"name": "1901", "value": "1901"}, {"name": "1900", "value": "1900"}, {"name": "1899", "value": "1899"}, {"name": "1898", "value": "1898"}], "supplementalText": "", "placeholder": "", "defaultValue": "", "instructions": ""}, {"restrictions": {}, "required": false, "name": "level_of_education", "type": "select", "supplementalLink": "", "errorMessages": {}, "label": "\u6700\u9ad8\u6559\u80b2\u7a0b\u5ea6", "options": [{"default": true, "name": "--", "value": ""}, {"name": "\u535a\u58eb\u5b78\u4f4d", "value": "p"}, {"name": "\u78a9\u58eb\u5b78\u4f4d", "value": "m"}, {"name": "\u5b78\u58eb\u5b78\u4f4d", "value": "b"}, {"name": "\u526f\u5b78\u58eb\u5b78\u4f4d", "value": "a"}, {"name": "\u9ad8\u4e2d", "value": "hs"}, {"name": "\u570b\u4e2d", "value": "jhs"}, {"name": "\u5c0f\u5b78", "value": "el"}, {"name": "\u672a\u53d7\u6b63\u5f0f\u6559\u80b2", "value": "none"}, {"name": "\u5176\u4ed6\u6559\u80b2", "value": "other"}], "supplementalText": "", "placeholder": "", "defaultValue": "", "instructions": ""}, {"restrictions": {}, "required": false, "name": "mailing_address", "type": "textarea", "supplementalLink": "", "errorMessages": {}, "label": "\u90f5\u5bc4\u5730\u5740", "supplementalText": "", "placeholder": "", "defaultValue": "", "instructions": ""}, {"restrictions": {}, "required": false, "name": "goals", "type": "textarea", "supplementalLink": "", "errorMessages": {}, "label": "\u8acb\u544a\u8a34\u6211\u5011\u60a8\u5c0dNTU Classroom\u611f\u8208\u8da3\u7684\u539f\u56e0", "supplementalText": "", "placeholder": "", "defaultValue": "", "instructions": ""}, {"restrictions": {}, "required": true, "name": "honor_code", "type": "checkbox", "supplementalLink": "/honor", "errorMessages": {"required": "\u60a8\u5fc5\u9808\u5c0dNTU Classroom \u670d\u52d9\u689d\u6b3e\u548c\u69ae\u8b7d\u6e96\u5247\u540c\u610f\u3002"}, "label": "\u6211\u5c0dNTU Classroom \u670d\u52d9\u689d\u6b3e\u548c\u69ae\u8b7d\u6e96\u5247\u8868\u793a\u540c\u610f", "supplementalText": "\u6aa2\u8996\u670d\u52d9\u689d\u6b3e\u548c\u69ae\u8b7d\u898f\u7bc4", "placeholder": "", "defaultValue": false, "instructions": ""}], "method": "post"}, "third_party_auth": {"finishAuthUrl": null, "errorMessage": null, "currentProvider": null, "secondaryProviders": [], "providers": [{"iconClass": "fa-sign-in", "name": "\u900f\u904e\u53f0\u5927\u8a08\u4e2d\u5e33\u865f\u9032\u884c\u767b\u5165", "iconImage": null, "registerUrl": "/auth/login/tpa-saml/?auth_entry=register\u0026next=%2Fdashboard\u0026idp=ntu-sso-2", "loginUrl": "/auth/login/tpa-saml/?auth_entry=login\u0026next=%2Fdashboard\u0026idp=ntu-sso-2", "id": "saml-ntu-sso-2"}]}};
+        LogistrationFactory(options);
+        if ('newrelic' in window) {
+            newrelic.finished();
+            // Because of a New Relic bug, the finished() event doesn't show up
+            // in Insights, so we have to make a new PageAction that is basically
+            // the same thing. We still want newrelic.finished() for session
+            // traces though.
+            newrelic.addPageAction('xfinished');
+        }
+    
+            });
+        }).call(this, require || RequireJS.require);
+    </script>
+
+
+
+  
+
+
+
+  <script type="text/javascript" src="./ntuclassroom_login_files/noreferrer.aa62a3e70ffa.js.下載" charset="utf-8"></script>
+  <script type="text/javascript" src="./ntuclassroom_login_files/navigation.323bf3e1ae16.js.下載" charset="utf-8"></script>
+  
+
+
+
+
+
+<!-- Performance beacon for onload times -->
+<div id="reader-feedback" class="sr" aria-live="polite"></div></body></html>
